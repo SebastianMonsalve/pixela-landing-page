@@ -1,7 +1,7 @@
 :root {
   /* COLORS */
   /* gradient */
-  --raisin-black-gradient: linear-gradient(180deg, #272635 0%, #979ec3 100%);
+  --raisin-black-gradient: linear-gradient(90deg, #f5f5f5 40%, #979ec3 100%);
 
   /* solid */
   --raisin-black: #272635;
@@ -65,6 +65,7 @@
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 ul,
 li,
@@ -99,6 +100,7 @@ textarea {
 }
 html {
   font-family: var(--ff-raleway);
+  scroll-behavior: smooth;
 }
 body {
   background: var(--anti-flash-white);
@@ -142,7 +144,7 @@ body {
   body::-webkit-scrollbar-thumb:hover {
     background: var(--raisin-black-100);
   }
-  body::-webkit-scrollbar-button {
+  /* body::-webkit-scrollbar-button {
     height: 60px;
-  }
+  } */
 }

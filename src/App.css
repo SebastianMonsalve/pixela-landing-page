@@ -38,33 +38,19 @@ article {
 
 /* responsive larger than 580px screen */
 @media (min-width: 580px) {
-  article {
-    width: 520px;
-  }
 }
 
 /* responsive larger than 768px screen */
 @media (min-width: 768px) {
-  article {
-    width: 700px;
-  }
 }
 
 /* responsive larger than 1024px screen */
 @media (min-width: 1024px) {
-  article {
-    width: 950px;
-  }
 }
 
 /* responsive larger than 1250px screen */
 @media (min-width: 1250px) {
   main {
-    max-width: 1270px;
     margin-inline: auto;
-  }
-  article {
-    width: auto;
-    min-height: 100%;
   }
 }
