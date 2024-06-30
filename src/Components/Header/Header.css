@@ -8,14 +8,24 @@
   transition: var(--transition-1);
   z-index: 2;
 }
-.header.fixed {
+.header.fixed,
+.header.open {
   background: var(--anti-flash-white);
   box-shadow: var(--shadow-1);
+}
+.header.fixed {
+  animation: 1s cubic-bezier(0.23, 1, 0.32, 1) both slideInFromTop;
 }
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.logo-main-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
 }
 .header .logo {
   width: auto;
@@ -28,8 +38,8 @@
   cursor: pointer;
 }
 .header-container .menu-icon .close-menu {
-  width: var(--fs-1);
-  height: var(--fs-1);
+  width: 36px;
+  height: 36px;
   background: var(--grape);
   border-radius: 50%;
 }
@@ -38,23 +48,51 @@
   display: none;
 }
 .menu-container {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  margin: 63px 0;
+  padding: 24px 18px;
+  background: var(--anti-flash-white);
+  transition: var(--transition-1);
+  transition-delay: 0.25s;
+  z-index: 3;
+}
+.menu-container.open {
+  left: 0;
 }
 .menu {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 32px;
+  flex-direction: column;
+  gap: 24px;
 }
 .menu .menu-item a {
-  font-size: var(--fs-4);
+  font-size: var(--fs-3);
   font-weight: var(--fw-400);
   color: var(--raisin-black);
   cursor: pointer;
   transition: var(--transition-1);
 }
-.menu .menu-item a:hover {
+.menu .menu-item a:hover,
+.menu .menu-item a.active {
   color: var(--grape-200);
+}
+.animate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: calc(100vh - 63px);
+  margin: 63px 0 0 0;
+  background: var(--grape);
+  transition: var(--transition-2);
+  transition-delay: 0.1s;
+  z-index: 2;
+}
+.animate.open {
+  width: 100%;
 }
 .options-container {
   display: none;
@@ -70,15 +108,45 @@
 
 /* responsive smaller than 1024px screen */
 @media (min-width: 1024px) {
+  .logo-main-container {
+    flex: 0;
+  }
   .menu-icon {
     display: none;
   }
   .menu-container {
     display: flex;
+    position: relative;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    background: transparent;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+  }
+  .animate {
+    display: none;
   }
   .options-container {
     display: flex;
     gap: 12px;
+  }
+}
+
+/* animations */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
