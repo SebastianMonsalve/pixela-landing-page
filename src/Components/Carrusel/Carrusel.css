@@ -1,0 +1,78 @@
+.carrusel {
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
+  background: var(--raisin-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.carrusel-text-container {
+  width: 90%;
+  max-width: 1250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.carrusel-text-container h2 {
+  color: var(--anti-flash-white);
+  font-size: calc(var(--fs-1) * 1.2);
+}
+.carrusel-container {
+  width: 90%;
+  max-width: 1250px;
+  height: var(--height);
+  mask-image: linear-gradient(to right, transparent, #000 20% 90%, transparent);
+  overflow: hidden;
+}
+.carrusel-container .carrusel-list {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.carrusel-list .carrusel-item {
+  position: absolute;
+  width: var(--width);
+  height: var(--height);
+  left: 100%;
+  animation: autoRun var(--animation-time) linear infinite;
+  transition: var(--transition-2);
+  animation-delay: calc((var(--animation-time) / var(--quantity)) * (var(--position) - 1)) !important;
+}
+.carrusel-item img {
+  width: 100%;
+}
+
+/* animations */
+@keyframes autoRun {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: calc(var(--width) * -1);
+  }
+}
+@keyframes autoRunReverse {
+  0% {
+    left: calc(var(--width) * -1);
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* hover effects */
+@media (hover: hover) {
+  .carrusel-container:hover .carrusel-item {
+    animation-play-state: paused;
+    filter: grayscale(1);
+  }
+  .carrusel-container .carrusel-item:hover {
+    filter: grayscale(0);
+  }
+}

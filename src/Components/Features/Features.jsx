@@ -4,16 +4,16 @@ const Features = () => {
   return (
     <section className='features'>
       <div className='feature-text-container'>
-        <h3 className='h3 feature-title'>Why choose us</h3>
-        <h2 className='h2 feature-subtitle'>4 reasons to partner with us</h2>
-        <p className='feature-text'>
+        <h3 className='section-title'>Why choose us</h3>
+        <h2 className='section-subtitle feature-text'>4 reasons to partner with us</h2>
+        <p className='section-description feature-text'>
           We're not just about design; we're your partners in crafting digital experiences that blend innovation with
           functionality. Let's team up to shape a future where design bridges your visions and reality.
         </p>
       </div>
       <div className='feature-cards-container'>
         <article className='feature-card'>
-          <div className='feature-card-count'>
+          <div className='box-count'>
             <svg xmlns='http://www.w3.org/2000/svg' width='49' height='58' viewBox='0 0 49 58' fill='none'>
               <ellipse
                 cx='24.524'
@@ -45,7 +45,7 @@ const Features = () => {
           </div>
         </article>
         <article className='feature-card layout-odd'>
-          <div className='feature-card-count'>
+          <div className='box-count'>
             <svg xmlns='http://www.w3.org/2000/svg' width='49' height='58' viewBox='0 0 49 58' fill='none'>
               <ellipse
                 cx='24.524'
