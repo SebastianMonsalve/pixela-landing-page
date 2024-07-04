@@ -1,4 +1,5 @@
 .carrusel {
+  margin-top: -2px;
   width: 100%;
   height: auto;
   padding: 20px 0;
@@ -25,51 +26,53 @@
 }
 .carrusel-container {
   width: 90%;
+  height: 100px;
   max-width: 1250px;
-  height: var(--height);
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+[data-animated='true'] {
   mask-image: linear-gradient(to right, transparent, #000 20% 90%, transparent);
   overflow: hidden;
 }
 .carrusel-container .carrusel-list {
-  position: relative;
   width: 100%;
+  height: 100px;
   display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: nowrap;
+  transition: var(--transition-2);
+  animation: scroll var(--animation-duration, 10s) var(--animation-direction, forwards) linear infinite;
 }
 .carrusel-list .carrusel-item {
-  position: absolute;
-  width: var(--width);
-  height: var(--height);
-  left: 100%;
-  animation: autoRun var(--animation-time) linear infinite;
   transition: var(--transition-2);
-  animation-delay: calc((var(--animation-time) / var(--quantity)) * (var(--position) - 1)) !important;
 }
 .carrusel-item img {
-  width: 100%;
+  width: auto;
+  height: 40px;
+}
+[data-duration='fast'] {
+  --animation-duration: 10s;
+}
+[data-direction='reverse'] {
+  --animation-direction: reverse;
 }
 
 /* animations */
-@keyframes autoRun {
-  0% {
-    left: 100%;
-  }
-  100% {
-    left: calc(var(--width) * -1);
-  }
-}
-@keyframes autoRunReverse {
-  0% {
-    left: calc(var(--width) * -1);
-  }
-  100% {
-    left: 100%;
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
   }
 }
 
 /* hover effects */
 @media (hover: hover) {
-  .carrusel-container:hover .carrusel-item {
+  .carrusel-container:hover .carrusel-list {
     animation-play-state: paused;
+  }
+  .carrusel-container:hover .carrusel-item {
     filter: grayscale(1);
   }
   .carrusel-container .carrusel-item:hover {

@@ -1,6 +1,13 @@
 import './Services.css';
+import ServicesData from './servicesData';
 
 const Services = () => {
+  const translateServices = (data) => {
+    return data;
+  };
+
+  const Services = translateServices(ServicesData);
+
   return (
     <section className='services'>
       <article className='services-container'>
@@ -13,72 +20,29 @@ const Services = () => {
           </p>
         </article>
         <article className='services-card-container'>
-          <div className='services-card'>
-            <div className='box-count'>
-              <svg xmlns='http://www.w3.org/2000/svg' width='49' height='58' viewBox='0 0 49 58' fill='none'>
-                <ellipse
-                  cx='24.524'
-                  cy='28.9095'
-                  rx='23'
-                  ry='30'
-                  transform='rotate(25 24.524 28.9095)'
-                  fill='#5e1bb1'
-                ></ellipse>
-              </svg>
-              <span className='count-text'>01</span>
-            </div>
-            <div className='service-card-text'>
-              <h4 className='service-card-title'>UI/UX Design</h4>
-              <p className='service-description'>
-                We create a seamless user experience through our innovative UI/UX design services. Our designs are
-                user-friendly and intuitive, ensuring a positive user experience.
-              </p>
-            </div>
-          </div>
-          <div className='services-card'>
-            <div className='box-count'>
-              <svg xmlns='http://www.w3.org/2000/svg' width='49' height='58' viewBox='0 0 49 58' fill='none'>
-                <ellipse
-                  cx='24.524'
-                  cy='28.9095'
-                  rx='23'
-                  ry='30'
-                  transform='rotate(25 24.524 28.9095)'
-                  fill='#5e1bb1'
-                ></ellipse>
-              </svg>
-              <span className='count-text'>01</span>
-            </div>
-            <div className='service-card-text'>
-              <h4 className='service-card-title'>UI/UX Design</h4>
-              <p className='service-description'>
-                We create a seamless user experience through our innovative UI/UX design services. Our designs are
-                user-friendly and intuitive, ensuring a positive user experience.
-              </p>
-            </div>
-          </div>
-          <div className='services-card'>
-            <div className='box-count'>
-              <svg xmlns='http://www.w3.org/2000/svg' width='49' height='58' viewBox='0 0 49 58' fill='none'>
-                <ellipse
-                  cx='24.524'
-                  cy='28.9095'
-                  rx='23'
-                  ry='30'
-                  transform='rotate(25 24.524 28.9095)'
-                  fill='#5e1bb1'
-                ></ellipse>
-              </svg>
-              <span className='count-text'>01</span>
-            </div>
-            <div className='service-card-text'>
-              <h4 className='service-card-title'>UI/UX Design</h4>
-              <p className='service-description'>
-                We create a seamless user experience through our innovative UI/UX design services. Our designs are
-                user-friendly and intuitive, ensuring a positive user experience.
-              </p>
-            </div>
-          </div>
+          {Services.map((service, index) => {
+            return (
+              <div key={index} className='services-card'>
+                <div className='box-count'>
+                  <svg xmlns='http://www.w3.org/2000/svg' width='49' height='58' viewBox='0 0 49 58' fill='none'>
+                    <ellipse
+                      cx='24.524'
+                      cy='28.9095'
+                      rx='23'
+                      ry='30'
+                      transform='rotate(25 24.524 28.9095)'
+                      fill='#5e1bb1'
+                    ></ellipse>
+                  </svg>
+                  <span className='count-text'>{index + 1 < 10 ? `0${index + 1}` : index + 1}</span>
+                </div>
+                <div className='service-card-text'>
+                  <h4 className='service-card-title'>{service.title}</h4>
+                  <p className='service-description'>{service.description}</p>
+                </div>
+              </div>
+            );
+          })}
         </article>
       </article>
     </section>

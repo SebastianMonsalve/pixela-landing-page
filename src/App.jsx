@@ -3,6 +3,7 @@ import Features from './Components/Features/Features';
 import Home from './Components/Home/Home';
 import Services from './Components/Services/Services';
 import Carrusel from './Components/Carrusel/Carrusel';
+import About from './Components/About/About';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Carrusel />
       {/* Work */}
       {/* Testimonial */}
-      {/* About */}
+      <About />
       {/* Questions */}
       {/* Contact */}
       {/* Footer */}

@@ -71,7 +71,7 @@
 }
 
 /* responsive larger than 1250px screen */
-@media (min-width: 1250px) {
+@media (min-width: 1024px) {
   .services {
     padding: 120px 0;
   }
