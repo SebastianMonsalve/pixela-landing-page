@@ -74,6 +74,18 @@ article {
   font-size: var(--fs-4);
 }
 
+/* animations */
+@keyframes appearContent {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* responsive larger than 580px screen */
 @media (min-width: 580px) {
 }

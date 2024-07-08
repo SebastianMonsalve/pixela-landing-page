@@ -21,8 +21,8 @@
 
   /* TYPOGRAPHY */
   /* font-family */
-  --ff-press-start: "Press Start 2P", system-ui;
-  --ff-raleway: "Raleway", sans-serif;
+  --ff-press-start: 'Press Start 2P', system-ui;
+  --ff-raleway: 'Raleway', sans-serif;
 
   /* font-size */
   --fs-1: 24px;
