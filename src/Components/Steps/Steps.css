@@ -114,17 +114,18 @@
 }
 .steps-text-container h3 {
   color: var(--raisin-black);
-  font-size: calc(var(--fs-2) * 1.2);
+  font-size: calc(var(--fs-1));
   font-weight: var(--fw-800);
   text-align: center;
   margin-bottom: 16px;
 }
 .steps-text-container p {
   color: var(--raisin-black);
-  font-size: calc(var(--fs-6) * 1.2);
   text-align: center;
   padding: 0 20px;
   text-wrap: balance;
+  font-size: var(--fs-4);
+  line-height: var(--lh-1);
 }
 
 @media (min-width: 1024px) {
@@ -138,7 +139,7 @@
   .steps-content-2,
   .steps-content-3 {
     width: 28%;
-    height: 300px;
+    height: 400px;
     margin: 0;
     border-radius: 20px 20px 0 0;
   }

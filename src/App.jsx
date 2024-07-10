@@ -4,6 +4,7 @@ import Home from "./Components/Home/Home";
 import Services from "./Components/Services/Services";
 import Steps from "./Components/Steps/Steps";
 import Carrusel from "./Components/Carrusel/Carrusel";
+import OurWorks from "./Components/OurWorks/OurWorks";
 import About from "./Components/About/About";
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       <Services />
       <Steps />
       <Carrusel />
-      {/* Work */}
+      <OurWorks />
       {/* Testimonial */}
       <About />
       {/* Questions */}

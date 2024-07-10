@@ -1,11 +1,10 @@
-import React from "react";
 import "./Steps.css";
 
 const Steps = () => {
   return (
     <div className="steps-bg">
       <div className="steps-title-container">
-        <h2>Simple Steps To Success</h2>
+        <h2 className="section-subtitle">Simple Steps To Success</h2>
       </div>
       <div className="steps-container">
         <div className="steps-content-1">
