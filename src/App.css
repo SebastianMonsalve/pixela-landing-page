@@ -92,6 +92,9 @@ article {
 
 /* responsive larger than 768px screen */
 @media (min-width: 768px) {
+  .section-title {
+    font-size: calc(var(--fs-3) * 1.2);
+  }
 }
 
 /* responsive larger than 1024px screen */

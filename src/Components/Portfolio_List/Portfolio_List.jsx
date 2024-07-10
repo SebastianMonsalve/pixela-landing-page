@@ -3,8 +3,8 @@ import ProjectsData from './portfolio_listData';
 
 const Portfolio_List = () => {
   const translateProjects = (data) => {
-    return data
-  }
+    return data;
+  };
 
   const Projects = translateProjects(ProjectsData);
 
@@ -25,8 +25,8 @@ const Portfolio_List = () => {
           {Projects.map((project, index) => (
             <article key={index} className='project-card'>
               <picture className='project-card-image'>
-                <img src={project.image} alt={project.alt} />
-                <a href={project.link} target='_blank'>
+                <img src={project.image} alt={project.alt} loading='lazy' />
+                <a href={project.link} target='_blank' title='View demo'>
                   <span>Explore</span>
                 </a>
               </picture>
@@ -38,7 +38,9 @@ const Portfolio_List = () => {
               </div>
               <div className='project-card-category'>
                 {project.categories.map((category, index) => (
-                  <p key={index} className='category-text'>{category}</p>
+                  <p key={index} className='category-text'>
+                    {category}
+                  </p>
                 ))}
               </div>
             </article>

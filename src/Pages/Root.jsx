@@ -5,6 +5,7 @@ import Features from '../Components/Features/Features';
 import Home from '../Components/Home/Home';
 import Services from '../Components/Services/Services';
 import Steps from '../Components/Steps/Steps';
+import OurWorks from '../Components/OurWorks/OurWorks';
 
 function Root() {
   useEffect(() => {
@@ -18,7 +19,7 @@ function Root() {
       <Services />
       <Steps />
       <Carrusel />
-      {/* Work */}
+      <OurWorks />
       {/* Testimonial */}
       <About />
       {/* Questions */}
