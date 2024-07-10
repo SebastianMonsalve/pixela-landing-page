@@ -7,7 +7,7 @@ const Steps = () => {
         <h2 className="section-subtitle">Simple Steps To Success</h2>
       </div>
       <div className="steps-container">
-        <div className="steps-content-1">
+        <div className="steps-content">
           <div className="steps-icon-container">
             <div className="circle-icon"></div>
             <i className="fa-regular fa-clipboard" />
@@ -20,7 +20,7 @@ const Steps = () => {
             </p>
           </div>
         </div>
-        <div className="steps-content-2">
+        <div className="steps-content">
           <div className="steps-icon-container">
             <div className="circle-icon"></div>
 
@@ -34,7 +34,7 @@ const Steps = () => {
             </p>
           </div>
         </div>
-        <div className="steps-content-3">
+        <div className="steps-content">
           <div className="steps-icon-container">
             <div className="circle-icon"></div>
             <i className="fa-regular fa-handshake" />
@@ -48,8 +48,8 @@ const Steps = () => {
           </div>
         </div>
       </div>
-      <div className="box1"></div>
-      <div className="box2"></div>
+      <div className="box"></div>
+      <div className="box"></div>
     </div>
   );
 };
