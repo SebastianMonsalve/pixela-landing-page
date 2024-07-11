@@ -107,7 +107,7 @@
 }
 .works-card-category {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 .works-card-category p {
   padding: 6px 15px;
@@ -122,7 +122,7 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 8px;
 }
 .works-card-title {
   color: var(--anti-flash-white);
