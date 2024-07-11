@@ -60,12 +60,8 @@ const Portfolio_List = () => {
           {Projects.map((project, index) => (
             <article key={index} className="project-card">
               <picture className="project-card-image">
-                <img src={project.image} alt={project.alt} />
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <img src={project.image} alt={project.alt} loading="lazy" />
+                <a href={project.link} target="_blank" title="View demo">
                   <span>Explore</span>
                 </a>
               </picture>
