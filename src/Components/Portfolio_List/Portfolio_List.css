@@ -39,7 +39,8 @@
 }
 .filter-btn {
   padding: 12px 24px;
-  border-radius: 24px;
+  border-radius: 20px;
+  text-wrap: nowrap;
   font-size: var(--fs-4);
   font-weight: var(--fw-500);
   background-color: #cbcbcbd2;
@@ -128,8 +129,12 @@
   background-color: var(--raisin-black-100);
   padding: 8px 16px;
   border-radius: 16px;
+  cursor: pointer;
 }
-
+.category-text:hover {
+  background: var(--grape);
+  color: var(--anti-flash-white);
+}
 /* hover effects */
 @media (hover: hover) {
   .project-card-title:hover {
