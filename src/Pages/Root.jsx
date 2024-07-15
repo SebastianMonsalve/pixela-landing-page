@@ -6,6 +6,7 @@ import Features from "../Components/Features/Features";
 import Home from "../Components/Home/Home";
 import Services from "../Components/Services/Services";
 import Steps from "../Components/Steps/Steps";
+import Questions from "../Components/Questions/Questions";
 
 function Root() {
   useEffect(() => {
@@ -22,7 +23,7 @@ function Root() {
       <OurWorks />
       {/* Testimonial */}
       <About />
-      {/* Questions */}
+      <Questions />
       {/* Contact */}
       {/* Footer */}
     </main>
